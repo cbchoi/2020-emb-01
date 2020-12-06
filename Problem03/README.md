@@ -1,7 +1,8 @@
 # 문제 3번 디렉토리 구조체 활용하기
-다음 코드는 search_files 함수에서 주어진 경로(path)에 존재하는 모든 파일 내 text의 글자 수를 세는 프로그램이다. 프로그램이 정상적으로 동작하도록 구현하시오. 
+다음 코드는 count_text 함수에서 주어진 경로(path)에 존재하는 모든 파일 내 text의 글자 수를 세는 프로그램이다. 프로그램이 정상적으로 동작하도록 구현하시오. 
 
 ## 참고사항
+ - 가정사항: 파일 내에는 character만 있기 때문에 fread를 통하여 읽어 들인 값은 모두 character라고 가정함
  - 코드는 자유롭게 추가/삭제할 수 있음
  - Compile Error: 0점
  - Compile은 성공하였으나 Runtime Error 발생: 5점
@@ -14,28 +15,26 @@
 #include <string.h>
 #include <dirent.h>
 
-#define KEY_SIZE 3
-
-void search_files(char* path, char* key)
+void count_text(char* path)
 {
-	/** 
-	 Hint Code
+	
+	/*
+	
 
-	 int ret = snprintf(pbuf, 255, "%s/%s", path, dir->d_name);
 
-	 if(strcmp(buff, key) == 0)
-	 {
-		printf("File Name:%s\n", dir->d_name);
-		count++;
-	 }
+		Put your code here
+	
+
+	
+
 	*/
 
-	printf("Total %d files are found.\n", count);
+	printf("Total %d characters are found.\n", count);
 }
 
 int main()
 {
-	count_char("./data", "abc");
+	count_text("./data");
 	return 0;
 }
 ```
